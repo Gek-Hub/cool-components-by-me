@@ -13,6 +13,10 @@ upBtn.addEventListener('click', (e) => {
 downBtn.addEventListener('click', (e) => {
 	changeSlade('down')
 })
+document.addEventListener('keydown', (e) => {
+	if (e.key === "ArrowUp") { changeSlade('up') }
+	if (e.key === "ArrowDown") { changeSlade('down') }
+})
 function changeSlade(dir){
 	if (dir ==="up") {
 		activeSlideIndex++;
