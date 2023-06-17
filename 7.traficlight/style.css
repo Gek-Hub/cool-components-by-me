@@ -1,0 +1,118 @@
+body {
+  background: url(./doroga.png);
+  background-size: cover;
+}
+.lihgt-trafic {
+  position: absolute;
+  left: 500px;
+  top: 200px;
+  background: url(./traficlight.png);
+  height: 512px;
+  width: 512px;
+  background-repeat: no-repeat;
+  position: relative;
+  zoom: 0.5;
+}
+.dark {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background: #000;
+  margin-bottom: 20px;
+  box-shadow: 0 0 6px 6px;
+}
+.light-container {
+  position: absolute;
+  left: 211px;
+  top: 66px;
+}
+.lightRed {
+  animation: lightRed 12s infinite;
+  -webkit-animation-duration: 12s;
+  -webkit-animation-name: lightRed;
+  -webkit-animation-iteration-count: infinite;
+}
+.lightYellow {
+  animation: lightYellow 12s infinite;
+  -webkit-animation-duration: 12s;
+  -webkit-animation-name: lightYellow;
+  -webkit-animation-iteration-count: infinite;
+}
+.lightGreen {
+  animation: lightGreen 12s infinite;
+  -webkit-animation-duration: 12s;
+  -webkit-animation-name: lightGreen;
+  -webkit-animation-iteration-count: infinite;
+}
+@-webkit-keyframes lightRed {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  000% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes lightYellow {
+  0% {
+    opacity: 1;
+  }
+  20% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  000% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes lightGreen {
+  0% {
+    opacity: 1;
+  }
+  20% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 0;
+  }
+  80% {
+    opacity: 0;
+  }
+  85% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 0;
+  }
+  95% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}

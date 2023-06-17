@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Authofication</title>
+    <style type="text/css">
+      body {
+        background-color: #f2f2f2;
+        font-family: Arial;
+      }
+      .calculator {
+        margin: 0 auto;
+        width: 500px;
+        height: 600px;
+        background-color: #333;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 40px;
+        border: 1px solid #000;
+        box-shadow: 3px 3px 5px 2px #333;
+      }
+      label {
+        color: #f2f2f2;
+        font-size: 18px;
+      }
+
+      input[type="text"] {
+        padding: 10px;
+        border-radius: 5px;
+        border: none;
+        background-color: #fff;
+        box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+      }
+
+      select {
+        padding: 10px;
+        border-radius: 5px;
+        border: none;
+        background-color: #fff;
+        box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+      }
+
+      button {
+        background-color: #4caf50; /* Green */
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin-top: 20px;
+        border-radius: 5px;
+        box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+      }
+
+      button:hover {
+        background-color: #3e8e41; /* Dark green */
+        cursor: pointer;
+      }
+
+      p {
+        font-size: 24px;
+        margin-top: 20px;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="calculator">
+      <div>
+        <label for="firstName">First Name:</label>
+        <input type="text" id="firstName" name="firstName" /><br /><br />
+
+        <label for="secondName">Second Name:</label>
+        <input type="text" id="secondName" name="secondName" /><br /><br />
+
+        <button onclick="calculate()">Solution</button><br /><br />
+
+        <p id="result"></p>
+      </div>
+    </div>
+
+    <script type="text/javascript">
+      function calculate() {
+        var firstName = document.getElementById("firstName").value;
+        var secondName = document.getElementById("secondName").value;
+        var result;
+
+        if (firstName.match(/\w+/g) || secondNumber.match(/\w+/g)) {
+          alert("Quary sended to server");
+          return;
+        }
+      }
+    </script>
+  </body>
+</html>

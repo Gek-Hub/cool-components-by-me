@@ -1,0 +1,116 @@
+body {
+  background-color: #f2f2f2;
+  font-family: Arial;
+}
+.calculator {
+  margin: 0 auto;
+  padding: 20px;
+  min-width: 500px;
+  min-height: 600px;
+  background-color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 40px;
+  border: 1px solid #000;
+  box-shadow: 3px 3px 5px 2px #333;
+}
+label {
+  color: #f2f2f2;
+  font-size: 18px;
+}
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+textarea {
+  height: 50px;
+}
+
+.main-select {
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: #fff;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+  font-size: 20px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+
+.main-select option {
+  font-size: 20px;
+}
+.myTable {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.myTable td,
+.myTable th {
+  border: 1px solid #ddd;
+  padding: 10px;
+  background-color: #f2f2f2;
+}
+.myTable .td {
+  cursor: pointer;
+}
+.myTable th {
+  background-color: #006699;
+  color: #fff;
+  font-weight: bold;
+  padding: 10px;
+  text-align: left;
+}
+.myTable tbody tr:nth-child(odd) {
+  background-color: #f2f2f2;
+}
+button {
+  background-color: #4caf50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-top: 20px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+}
+
+button:hover {
+  background-color: #3e8e41; /* Dark green */
+  cursor: pointer;
+}
+
+p {
+  font-size: 24px;
+  margin-top: 20px;
+  color: white;
+}
+.no-visible {
+  display: none;
+}
+.myTable .red {
+  background: red;
+}
+#animated-tube {
+  position: fixed;
+  z-index: 9999;
+  bottom: 10px;
+  right: 10px;
+  animation: tube-rotate 2s linear infinite;
+}
+
+@keyframes tube-rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
