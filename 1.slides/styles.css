@@ -6,11 +6,14 @@
 }
 
 body {
-  font-family: 'Muli', sans-serif;
+  
+	font-family: 'Muli', sans-serif;
   overflow: hidden;
   margin: 0;
   background: rgb(25, 50, 50);
   min-height: 100vh;
+}
+.slider{
   display: flex;
   justify-content: center;
   align-items: center;
@@ -48,4 +51,9 @@ body {
 .slide.active h3 {
   opacity: 1;
   transition: opacity 1s ease-in 0.2s;
+}
+h1{
+	color: white;
+	text-align: center;
+	font-size: 64px
 }

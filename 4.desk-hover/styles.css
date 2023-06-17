@@ -1,0 +1,32 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #111;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+
+}
+.container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 500px;
+}
+.square{
+  width: 20px;
+  height: 20px;
+  background: #444;
+  margin: 2px;
+  box-shadow: 0 0 2px #000;
+  transition: 4s ease;
+}
+.square:hover{
+  transition-duration: 0s;
+}
+
