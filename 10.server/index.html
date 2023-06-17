@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Calculator</title>
+    <style type="text/css">
+      body {
+        background-color: #f2f2f2;
+        font-family: Arial;
+      }
+      .calculator {
+        margin: 0 auto;
+        width: 500px;
+        height: 600px;
+        background-color: #333;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 40px;
+        border: 1px solid #000;
+        box-shadow: 3px 3px 5px 2px #333;
+      }
+      label {
+        color: #f2f2f2;
+        font-size: 18px;
+      }
+
+      input[type="number"] {
+        padding: 10px;
+        border-radius: 5px;
+        border: none;
+        background-color: #fff;
+        box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+      }
+
+      select {
+        padding: 10px;
+        border-radius: 5px;
+        border: none;
+        background-color: #fff;
+        box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+      }
+
+      button {
+        background-color: #4caf50; /* Green */
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin-top: 20px;
+        border-radius: 5px;
+        box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+      }
+
+      button:hover {
+        background-color: #3e8e41; /* Dark green */
+        cursor: pointer;
+      }
+
+      p {
+        font-size: 24px;
+        margin-top: 20px;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="calculator">
+      <div>
+        <form id="calc-form">
+          <label for="firstNumber">First Number:</label>
+          <input
+            type="number"
+            id="firstNumber"
+            name="firstNumber"
+          /><br /><br />
+
+          <label for="operation">Operation:</label>
+          <select id="operation" name="operation">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option selected="true" value="*">*</option>
+            <option value="/">/</option>
+            <option value="^">^</option>
+            <option value="%">Mod</option>
+            <option value="cos">cos</option></select
+          ><br /><br />
+
+          <label for="secondNumber">Second Number:</label>
+          <input
+            type="number"
+            id="secondNumber"
+            name="secondNumber"
+          /><br /><br />
+
+          <button type="button" id="solution-btn" onclick="calculate()">
+            Solution</button
+          ><br /><br />
+
+          <p id="result"></p>
+        </form>
+      </div>
+    </div>
+
+    <script type="text/javascript">
+      function calculate() {
+        var firstNumber = parseFloat(
+          document.getElementById("firstNumber").value
+        );
+        var secondNumber = parseFloat(
+          document.getElementById("secondNumber").value
+        );
+        var operation = document.getElementById("operation").value;
+        var result;
+        // Check if numbers is NaN
+        if (isNaN(firstNumber) || isNaN(secondNumber)) {
+          alert("Enter valid numbers");
+          return;
+        }
+        fetch("/calculate", {
+          method: "POST",
+          body: JSON.stringify({
+            firstNumber,
+            secondNumber,
+            operation,
+          }),
+          headers: {
+            "Content-Type": "application/json",
+          },
+        })
+          .then((response) => response.text())
+          .then((text) => {
+            document.getElementById("result").innerText = text;
+          })
+          .catch((error) => console.log(error));
+      }
+    </script>
+  </body>
+</html>
